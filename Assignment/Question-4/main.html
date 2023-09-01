@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        /* Set the width of the three columns */
+        td:first-child {
+            width: 20%;
+        }
+
+        td:nth-child(2) {
+            width: 40%;
+        }
+
+        td:nth-child(3) {
+            width: 40%;
+        }
+
+        
+        .topic-content, .topic-image {
+            display: none;
+        }
+
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a:link {
+            color: green; 
+            text-decoration: none;
+        }
+
+        ul li a:visited {
+            color: blue; 
+            text-decoration: none;
+        }
+
+        ul li a:hover, ul li a:active {
+            color: red; 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td colspan="3" align="center">Your Name <br/>Punch line etc.
+                    </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li><a href="#" onclick="showTopic('Objective')">Objective</a></li>
+                        <li><a href="#" onclick="showTopic('PersonalInformation')">Personal Information</a></li>
+                        <li><a href="#" onclick="showTopic('FamilyInformation')">Family Information</a></li>
+                        <li><a href="#" onclick="showTopic('EducationalInformation')">Educational Information</a></li>
+                        <li><a href="#" onclick="showTopic('Experience')">Experience </a></li>
+                        <li><a href="#" onclick="showTopic('Achievements')">Achievements </a></li>
+                        <li><a href="#" onclick="showTopic('Other')">Other </a></li>
+                        
+                    </ul>
+                </td>
+                <td>
+                    <div class="topic-content" id="Objective">
+                        
+                        <p>Content for Topic 1 goes here.</p>
+                    </div>
+                    <div class="topic-content" id="PersonalInformation">
+                        
+                        <p>Content for Personal Information goes here.</p>
+                    </div>
+                    <div class="topic-content" id="FamilyInformation">
+                        
+                        <p>Content for Family Information goes here.</p>
+                    </div>
+                    <div class="topic-content" id="EducationalInformation">
+                        
+                        <p>Content for Educational Information goes here.</p>
+                    </div>
+                    <div class="topic-content" id="Experience">
+                        
+                        <p>Content for Experience goes here.</p>
+                    </div>
+                    <div class="topic-content" id="Achievements">
+                        
+                        <p>Content for Achievements goes here.</p>
+                    </div>
+                    <div class="topic-content" id="Other">
+                        
+                        <p>Content for Other goes here.</p>
+                    </div>
+                    
+                    <div class="topic-content" id="empty-space">
+                        
+                    </div>
+                </td>
+                <td>
+                    <div class="topic-image" id="Objective-image">
+                        <img src="Objective.jpg" alt="Topic 1 Image">
+                    </div>
+                    <div class="topic-image" id="PersonalInformation-image">
+                        <img src="PersonalInformation.jpg" alt="Personal Information Image">
+                    </div>
+                    <div class="topic-image" id="FamilyInformation-image">
+                        <img src="FamilyInformation.jpg" alt="Family Information Image">
+                    </div>
+                    <div class="topic-image" id="EducationalInformation-image">
+                        <img src="EducationalInformation.jpg" alt="Educational Information Image">
+                    </div>
+                    <div class="topic-image" id="Experience-image">
+                        <img src="Experience.jpg" alt="Experience Image">
+                    </div>
+                    <div class="topic-image" id="Achievements-image">
+                        <img src="Achievements.jpg" alt="Achievements Image">
+                    </div>
+                    <div class="topic-image" id="Other-image">
+                        <img src="Other.jpg" alt="Other Image">
+                    </div>
+                    <!-- Repeat this structure for each topic -->
+                    <div class="topic-image" id="empty-space-image">
+                        <!-- Empty space image -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" align="center">Your contact details</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        
+        function showTopic(topicId) {
+            const allTopicContent = document.querySelectorAll('.topic-content');
+            const allTopicImages = document.querySelectorAll('.topic-image');
+
+            for (const content of allTopicContent) {
+                content.style.display = 'none';
+            }
+
+            for (const image of allTopicImages) {
+                image.style.display = 'none';
+            }
+
+            
+            const selectedContent = document.getElementById(topicId);
+            const selectedImage = document.getElementById(topicId + '-image');
+
+            if (selectedContent && selectedImage) {
+                selectedContent.style.display = 'block';
+                selectedImage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
