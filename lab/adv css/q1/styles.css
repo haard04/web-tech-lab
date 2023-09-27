@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table1 {
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid lightblue;
+  background-color: blue;
+}
+
+.table2 {
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid lightgreen;
+  background-color: green;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #eee;
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    flex-direction: column;
+  }
+
+  .table1, .table2 {
+    width: 100%;
+  }
+
+  /* Swap table colors in portrait mode */
+  .table1 {
+    background-color: green;
+  }
+
+  .table2 {
+    background-color: blue;
+  }
+}

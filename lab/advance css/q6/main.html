@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="text"]:hover {
+            background-color: yellow;
+        }
+
+        .form-container input[type="password"]:hover {
+            background-color: pink;
+        }
+
+        .form-container label:hover {
+            color: red;
+        }
+
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="reset"]:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="sports">Select your favorite sport:</label><br>
+            <input type="checkbox" id="cricket" name="sport" value="Cricket">
+            <label for="cricket">Cricket</label><br>
+            <input type="checkbox" id="hockey" name="sport" value="Hockey">
+            <label for="hockey">Hockey</label><br>
+            <input type="checkbox" id="badminton" name="sport" value="Badminton">
+            <label for="badminton">Badminton</label><br>
+            <input type="checkbox" id="tennis" name="sport" value="Tennis">
+            <label for="tennis">Tennis</label><br><br>
+
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+</html>

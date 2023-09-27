@@ -1,0 +1,19 @@
+/* Apply normal font style and set the heading size to 120% */
+h1 {
+    font-style: normal;
+    font-size: 120%;
+  }
+  
+  /* Define a class 'arial' for paragraphs */
+  .arial {
+    font-family: Arial, sans-serif; /* Use Arial font or a sans-serif fallback */
+    font-weight: bold;
+    margin-top: 3cm; /* Add 3cm spacing before the paragraph */
+  }
+  
+  /* Apply background image 'hello.jpg' repeating vertically */
+  body {
+    background-image: url('pic.png');
+    background-repeat: repeat-y;
+    /* You can add more background properties here, such as background-size, background-position, etc. */
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Link Button</title>
+    <style>
+        :root {
+            --button-background: white;
+            --button-border: blue;
+            --button-hover-background: blue;
+            --button-hover-border: transparent;
+            --transition-duration: 0.3s;
+        }
+
+        .hoverable-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--button-background);
+            border: 2px solid var(--button-border);
+            color: blue;
+            /* Change the text color as per your preference */
+            text-decoration: none;
+            transition: background-color var(--transition-duration), border-color var(--transition-duration);
+        }
+
+        .hoverable-button:hover {
+            background-color: var(--button-hover-background);
+            border-color: var(--button-hover-border);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="hoverable-button">Hover Me</a>
+</body>
+
+</html>

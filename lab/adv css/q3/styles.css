@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: squareCycle 4s linear infinite;
+}
+
+@keyframes squareCycle {
+    0% {
+        background-color: red;
+        transform: translateX(0);
+    }
+    25% {
+        background-color: blue;
+        transform: translateX(100px);
+    }
+    50% {
+        background-color: green;
+        transform: translateX(100px) translateY(100px);
+    }
+    75% {
+        background-color: yellow;
+        transform: translateY(100px);
+    }
+    100% {
+        background-color: red;
+        transform: translateX(0);
+    }
+}
